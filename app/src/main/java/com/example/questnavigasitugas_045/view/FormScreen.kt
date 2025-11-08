@@ -250,5 +250,25 @@ fun FormScreen(onBackToListClicked: () -> Unit = {}) {
         }
     }
 
-
+    if (showSuccessDialog) {
+        AlertDialog(
+            onDismissRequest = { showSuccessDialog = false },
+            title = { Text(text = "Pendaftaran Berhasil") },
+            text = {
+                Column {
+                    Text("Data yang Anda isikan:")
+                    Spacer(modifier = Modifier.height(8.dp))
+                    Text("Nama: $nama")
+                    Text("Tanggal Lahir: $tanggalLahir")
+                    Text("Asal: $asal")
+                    Text("Role: $role")
+                }
+            },
+            confirmButton = {
+                Button(onClick = { showSuccessDialog = false }) {
+                    Text("OK")
+                }
+            }
+        )
+    }
 }
