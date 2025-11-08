@@ -33,5 +33,17 @@ import com.example.questnavigasitugas_045.ui.theme.QuestNavigasiTugas_045Theme
 @Composable
 fun FormScreen(onBackToListClicked: () -> Unit = {}) {
 
+    var nama by remember { mutableStateOf("") }
+    var tanggalLahir by remember { mutableStateOf("") }
+    var asal by remember { mutableStateOf("") }
+    val roleOptions = listOf("Gold Laner", "EXP Laner", "Jungler", "Midlaner", "Roamer")
+    var role by remember { mutableStateOf("") }
+
+    var showSuccessDialog by remember { mutableStateOf(false) }
+    val context = LocalContext.current
+
+    // State untuk Dropdown Role
+    var expanded by remember { mutableStateOf(false) }
+
 
 }
