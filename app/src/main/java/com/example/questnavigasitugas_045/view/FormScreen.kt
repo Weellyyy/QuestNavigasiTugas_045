@@ -84,6 +84,33 @@ fun FormScreen(onBackToListClicked: () -> Unit = {}) {
                 modifier = Modifier.padding(vertical = 24.dp)
             )
 
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .glassmorphismForm()
+                    .padding(24.dp)
+            ) {
+                Column(
+                    modifier = Modifier.verticalScroll(rememberScrollState()),
+                    verticalArrangement = Arrangement.spacedBy(16.dp)
+                ) {
+                    Column {
+                        Text(text = "NAMA LENGKAP", color = Color.White.copy(0.8f), fontSize = 12.sp)
+                        OutlinedTextField(
+                            value = nama,
+                            onValueChange = { nama = it },
+                            modifier = Modifier.fillMaxWidth(),
+                            shape = RoundedCornerShape(8.dp),
+                            colors = OutlinedTextFieldDefaults.colors(
+                                unfocusedBorderColor = Color.White.copy(0.5f),
+                                focusedBorderColor = Color.White,
+                                unfocusedTextColor = Color.White,
+                                focusedTextColor = Color.White,
+                                cursorColor = Color.White
+                            )
+                        )
+                    }
+
 
     }
 }
