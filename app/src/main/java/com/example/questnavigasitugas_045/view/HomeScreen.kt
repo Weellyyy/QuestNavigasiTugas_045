@@ -28,8 +28,23 @@ import com.example.questnavigasitugas_045.ui.theme.QuestNavigasiTugas_045Theme
 
 @Composable
 fun HomeScreen(onLoginClicked: () -> Unit = {}) {
-    
-}
+
+    fun Modifier.glassmorphism(
+        shape: Shape = RoundedCornerShape(20.dp),
+        color: Color = Color.White.copy(alpha = 0.2f),
+        borderWidth: Dp = 1.dp,
+        borderColor: Color = Color.White.copy(alpha = 0.5f)
+    ): Modifier = composed {
+        this
+            .clip(shape)
+            .background(color)
+            .border(
+                width = borderWidth,
+                color = borderColor,
+                shape = shape
+            )
+    }
+
 
 
 
