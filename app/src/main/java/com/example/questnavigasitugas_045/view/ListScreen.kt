@@ -99,6 +99,24 @@ fun ListScreen(
                                         color = Color.White
                                     )
                                 }
+                                Column(
+                                    horizontalAlignment = Alignment.End
+                                ) {
+                                    Text(
+                                        text = "TANGGAL LAHIR",
+                                        fontSize = 10.sp,
+                                        color = Color.White.copy(alpha = 0.8f)
+                                    )
+                                    Text(
+                                        text = peserta.tanggalLahir,
+                                        fontSize = 14.sp,
+                                        fontWeight = FontWeight.SemiBold,
+                                        color = Color.White
+                                    )
+                                }
+                            }
+
+
     }
 }
 
