@@ -178,7 +178,20 @@ fun ListScreen(
                     Text("Beranda", fontWeight = FontWeight.Bold)
                 }
                 Spacer(modifier = Modifier.width(16.dp))
-
+                Button(
+                    onClick = onFormulirClicked,
+                    modifier = Modifier
+                        .weight(1f)
+                        .height(48.dp),
+                    shape = RoundedCornerShape(12.dp),
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = Color.White.copy(alpha = 0.3f),
+                        contentColor = Color.White
+                    ),
+                    elevation = ButtonDefaults.buttonElevation(defaultElevation = 0.dp)
+                ) {
+                    Text("Formulir", fontWeight = FontWeight.Bold)
+                }
             }
         }
     }
