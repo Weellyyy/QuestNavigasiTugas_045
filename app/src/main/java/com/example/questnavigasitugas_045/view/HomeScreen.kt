@@ -109,6 +109,17 @@ fun HomeScreen(onLoginClicked: () -> Unit = {}) {
                         fontWeight = FontWeight.Bold,
                         lineHeight = 20.sp
                     )
+                    Text(
+                        text = stringResource(R.string.nim),
+                        fontSize = 12.sp,
+                        color = Color.Black,
+                        textAlign = TextAlign.Center,
+                        fontWeight = FontWeight.Bold,
+                        lineHeight = 20.sp
+                    )
+                }
+            }
+
 
         }
     }
