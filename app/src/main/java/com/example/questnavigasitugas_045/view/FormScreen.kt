@@ -45,5 +45,22 @@ fun FormScreen(onBackToListClicked: () -> Unit = {}) {
     // State untuk Dropdown Role
     var expanded by remember { mutableStateOf(false) }
 
+    // --- Fungsi Lokal untuk Glassmorphism ---
+    fun Modifier.glassmorphismForm(
+        shape: Shape = RoundedCornerShape(24.dp),
+        color: Color = Color.White.copy(alpha = 0.2f),
+        borderWidth: Dp = 1.dp,
+        borderColor: Color = Color.White.copy(alpha = 0.4f)
+    ): Modifier = composed {
+        this
+            .clip(shape)
+            .background(color)
+            .border(
+                width = borderWidth,
+                color = borderColor,
+                shape = shape
+            )
+    }
 
+    }
 }
