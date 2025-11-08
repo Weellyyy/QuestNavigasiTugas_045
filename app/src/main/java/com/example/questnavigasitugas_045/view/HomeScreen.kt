@@ -99,6 +99,16 @@ fun HomeScreen(onLoginClicked: () -> Unit = {}) {
                         contentScale = ContentScale.Crop
                     )
 
+                    Spacer(modifier = Modifier.height(32.dp))
+
+                    Text(
+                        text = stringResource(R.string.nama),
+                        fontSize = 14.sp,
+                        color = Color.Black,
+                        textAlign = TextAlign.Center,
+                        fontWeight = FontWeight.Bold,
+                        lineHeight = 20.sp
+                    )
 
         }
     }
