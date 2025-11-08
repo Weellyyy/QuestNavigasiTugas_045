@@ -49,7 +49,7 @@ fun HomeScreen(onLoginClicked: () -> Unit = {}) {
         modifier = Modifier.fillMaxSize()
     ) {
         Image(
-            painter = painterResource(id = R.drawable.uibg),
+            painter = painterResource(id = R.drawable.mobileapp),
             contentDescription = null,
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop
@@ -74,7 +74,7 @@ fun HomeScreen(onLoginClicked: () -> Unit = {}) {
                     text = stringResource(R.string.welkam),
                     fontSize = 24.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color.Black,
+                    color = Color.White,
                     textAlign = TextAlign.Center
                 )
             }
@@ -104,7 +104,7 @@ fun HomeScreen(onLoginClicked: () -> Unit = {}) {
                     Text(
                         text = stringResource(R.string.nama),
                         fontSize = 14.sp,
-                        color = Color.Black,
+                        color = Color.White,
                         textAlign = TextAlign.Center,
                         fontWeight = FontWeight.Bold,
                         lineHeight = 20.sp
@@ -112,7 +112,7 @@ fun HomeScreen(onLoginClicked: () -> Unit = {}) {
                     Text(
                         text = stringResource(R.string.nim),
                         fontSize = 12.sp,
-                        color = Color.Black,
+                        color = Color.White,
                         textAlign = TextAlign.Center,
                         fontWeight = FontWeight.Bold,
                         lineHeight = 20.sp
