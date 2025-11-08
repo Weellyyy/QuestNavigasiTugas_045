@@ -57,4 +57,11 @@ fun AppNavigasi(
 }
 
 
+private fun kembaliKeHome(
+    navController: NavHostController
+) {
+    navController.popBackStack(Page.Home.name, inclusive = false)
+}
+
+
 
