@@ -129,5 +129,22 @@ fun FormScreen(onBackToListClicked: () -> Unit = {}) {
                         )
                     }
 
+                    Column {
+                        Text(text = "ASAL", color = Color.White.copy(0.8f), fontSize = 12.sp)
+                        OutlinedTextField(
+                            value = asal,
+                            onValueChange = { asal = it },
+                            modifier = Modifier.fillMaxWidth(),
+                            shape = RoundedCornerShape(8.dp),
+                            colors = OutlinedTextFieldDefaults.colors(
+                                unfocusedBorderColor = Color.White.copy(0.5f),
+                                focusedBorderColor = Color.White,
+                                unfocusedTextColor = Color.White,
+                                focusedTextColor = Color.White,
+                                cursorColor = Color.White
+                            )
+                        )
+                    }
+
 
 }
