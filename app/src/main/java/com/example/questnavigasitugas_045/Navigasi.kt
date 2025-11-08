@@ -26,4 +26,12 @@ fun AppNavigasi(
         navController = navController,
         startDestination = Page.Home.name,
         modifier = modifier
-    ) {}
+    ) {
+        composable(route = Page.Home.name) {
+            HomeScreen(
+                onLoginClicked = {
+                    navController.navigate(Page.List.name)
+                }
+            )
+        }
+
