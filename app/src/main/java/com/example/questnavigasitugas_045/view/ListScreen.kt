@@ -48,7 +48,14 @@ fun ListScreen(
             )
     }
 
-
+    Box(modifier = Modifier.fillMaxSize()) {
+        Image(
+            painter = painterResource(id = R.drawable.uibg),
+            contentDescription = null,
+            modifier = Modifier.fillMaxSize(),
+            contentScale = ContentScale.Crop
+        )
+    }
 }
 
 
