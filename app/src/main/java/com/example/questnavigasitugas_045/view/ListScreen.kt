@@ -70,7 +70,35 @@ fun ListScreen(
                 modifier = Modifier.padding(vertical = 24.dp)
             )
 
-        }
+            LazyColumn(
+                modifier = Modifier.weight(1f),
+                verticalArrangement = Arrangement.spacedBy(16.dp)
+            ) {
+                items(DataProvider.listPeserta) { peserta ->
+                    Box(modifier = Modifier.glassmorphismCard()) {
+                        Column(
+                            modifier = Modifier
+                                .padding(16.dp)
+                                .fillMaxWidth()
+                        ) {
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                horizontalArrangement = Arrangement.SpaceBetween,
+                                verticalAlignment = Alignment.Top
+                            ) {
+                                Column(Modifier.weight(1f)) {
+                                    Text(
+                                        text = "NAMA LENGKAP",
+                                        fontSize = 10.sp,
+                                        color = Color.White.copy(alpha = 0.8f)
+                                    )
+                                    Text(
+                                        text = peserta.nama,
+                                        fontSize = 14.sp,
+                                        fontWeight = FontWeight.SemiBold,
+                                        color = Color.White
+                                    )
+                                }
     }
 }
 
