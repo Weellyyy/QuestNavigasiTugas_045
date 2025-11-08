@@ -111,6 +111,23 @@ fun FormScreen(onBackToListClicked: () -> Unit = {}) {
                         )
                     }
 
+                    Column {
+                        Text(text = "TANGGAL LAHIR", color = Color.White.copy(0.8f), fontSize = 12.sp)
+                        OutlinedTextField(
+                            value = tanggalLahir,
+                            onValueChange = { tanggalLahir = it },
+                            modifier = Modifier.fillMaxWidth(),
+                            shape = RoundedCornerShape(8.dp),
+                            placeholder = { Text("Contoh: 23-12-2004", color = Color.White.copy(0.5f)) },
+                            colors = OutlinedTextFieldDefaults.colors(
+                                unfocusedBorderColor = Color.White.copy(0.5f),
+                                focusedBorderColor = Color.White,
+                                unfocusedTextColor = Color.White,
+                                focusedTextColor = Color.White,
+                                cursorColor = Color.White
+                            )
+                        )
+                    }
 
-    }
+
 }
