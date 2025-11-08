@@ -42,10 +42,10 @@ fun FormScreen(onBackToListClicked: () -> Unit = {}) {
     var showSuccessDialog by remember { mutableStateOf(false) }
     val context = LocalContext.current
 
-    // State untuk Dropdown Role
-    var expanded by remember { mutableStateOf(false) }
 
-    // --- Fungsi Lokal untuk Glassmorphism ---
+    var expanded by remember { mutableStateOf(false) }
+    var showErrorDialog by remember { mutableStateOf(false) }
+
     fun Modifier.glassmorphismForm(
         shape: Shape = RoundedCornerShape(24.dp),
         color: Color = Color.White.copy(alpha = 0.2f),
@@ -204,5 +204,51 @@ fun FormScreen(onBackToListClicked: () -> Unit = {}) {
                 ) {
                     Text("Kembali")
                 }
+                Spacer(modifier = Modifier.width(16.dp))
+                Button(
+                    onClick = {
+                        if (nama.isBlank() || tanggalLahir.isBlank() || asal.isBlank() || role.isBlank()) {
+                            showErrorDialog = true
+                        } else {
+                            showSuccessDialog = true
+                        }
+                    },
+                    modifier = Modifier
+                        .weight(1f)
+                        .height(48.dp),
+                    shape = RoundedCornerShape(12.dp),
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = Color.White.copy(alpha = 0.3f),
+                        contentColor = Color.White
+                    )
+                ) {
+                    Text("Submit")
+                }
+
+                if (showErrorDialog) {
+                    AlertDialog(
+                        onDismissRequest = { showErrorDialog = false },
+                        title = {
+                            Text(
+                                text = "Data Tidak Boleh Kosong",
+                                color = Color.Black,
+                                fontWeight = FontWeight.Bold
+                            )
+                        },
+                        text = {
+                            Text("Silahkan Lengkapi Isi Data dengan Benar")
+                        },
+                        confirmButton = {
+                            TextButton(onClick = { showErrorDialog = false }) {
+                                Text("OK")
+                            }
+                        },
+                        shape = RoundedCornerShape(16.dp)
+                    )
+                }
+            }
+        }
+    }
+
 
 }
