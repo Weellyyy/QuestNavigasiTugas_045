@@ -120,7 +120,24 @@ fun HomeScreen(onLoginClicked: () -> Unit = {}) {
                 }
             }
 
+            Spacer(modifier = Modifier.weight(1f))
 
+            Button(
+                onClick = onLoginClicked,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(56.dp)
+                    .padding(horizontal = 16.dp),
+                shape = RoundedCornerShape(12.dp),
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color.White.copy(alpha = 0.3f),
+                    contentColor = Color.Black
+                )
+            ) {
+                Text("Masuk")
+            }
+
+            Spacer(modifier = Modifier.height(32.dp))
         }
     }
 }
