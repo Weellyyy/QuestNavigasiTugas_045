@@ -64,4 +64,8 @@ private fun kembaliKeHome(
 }
 
 
-
+private fun kembaliKeList(
+    navController: NavHostController
+) {
+    navController.popBackStack()
+}
