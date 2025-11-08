@@ -21,4 +21,9 @@ enum class Page {
 fun AppNavigasi(
     navController: NavHostController = rememberNavController(),
     modifier: Modifier = Modifier
-) {}
+) {
+    NavHost(
+        navController = navController,
+        startDestination = Page.Home.name,
+        modifier = modifier
+    ) {}
