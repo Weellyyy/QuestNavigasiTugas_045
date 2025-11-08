@@ -46,4 +46,15 @@ fun AppNavigasi(
             )
         }
 
+        composable(route = Page.Formulir.name) {
+            FormScreen(
+                onBackToListClicked = {
+                    kembaliKeList(navController)
+                }
+            )
+        }
+    }
+}
+
+
 
