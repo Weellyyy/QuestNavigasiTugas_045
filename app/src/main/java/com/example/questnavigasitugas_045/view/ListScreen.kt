@@ -32,6 +32,23 @@ fun ListScreen(
     onBerandaClicked: () -> Unit = {},
     onFormulirClicked: () -> Unit = {}
 ) {
+    fun Modifier.glassmorphismCard(
+        shape: Shape = RoundedCornerShape(16.dp),
+        color: Color = Color.White.copy(alpha = 0.25f),
+        borderWidth: Dp = 1.dp,
+        borderColor: Color = Color.White.copy(alpha = 0.5f)
+    ): Modifier = composed {
+        this
+            .clip(shape)
+            .background(color)
+            .border(
+                width = borderWidth,
+                color = borderColor,
+                shape = shape
+            )
+    }
+
+
 }
 
 
