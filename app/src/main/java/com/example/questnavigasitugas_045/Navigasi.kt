@@ -17,4 +17,8 @@ enum class Page {
     Formulir
 }
 
-
+@Composable
+fun AppNavigasi(
+    navController: NavHostController = rememberNavController(),
+    modifier: Modifier = Modifier
+) {}
