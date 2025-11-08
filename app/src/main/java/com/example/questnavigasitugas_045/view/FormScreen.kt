@@ -187,5 +187,22 @@ fun FormScreen(onBackToListClicked: () -> Unit = {}) {
                 }
             }
 
+            Spacer(modifier = Modifier.weight(1f))
+
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween
+            ) {
+                Button(
+                    onClick = onBackToListClicked,
+                    modifier = Modifier.weight(1f).height(48.dp),
+                    shape = RoundedCornerShape(12.dp),
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = Color.White.copy(alpha = 0.3f),
+                        contentColor = Color.White
+                    )
+                ) {
+                    Text("Kembali")
+                }
 
 }
