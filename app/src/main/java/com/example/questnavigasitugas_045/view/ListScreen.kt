@@ -116,7 +116,28 @@ fun ListScreen(
                                 }
                             }
 
+                            Spacer(modifier = Modifier.height(16.dp))
 
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                horizontalArrangement = Arrangement.SpaceBetween,
+                                verticalAlignment = Alignment.Top
+                            ) {
+                                Column(Modifier.weight(1f)) {
+                                    Text(
+                                        text = "ASAL",
+                                        fontSize = 10.sp,
+                                        color = Color.White.copy(alpha = 0.8f)
+                                    )
+                                    Text(
+                                        text = peserta.asal,
+                                        fontSize = 14.sp,
+                                        fontWeight = FontWeight.SemiBold,
+                                        color = Color.White
+                                    )
+                                }
+
+        }
     }
 }
 
