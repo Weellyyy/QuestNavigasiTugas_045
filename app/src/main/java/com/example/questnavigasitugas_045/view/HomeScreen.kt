@@ -55,6 +55,16 @@ fun HomeScreen(onLoginClicked: () -> Unit = {}) {
             contentScale = ContentScale.Crop
         )
 
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(32.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.SpaceBetween
+        ) {
 
+        }
+    }
+}
 
 
