@@ -35,3 +35,15 @@ fun AppNavigasi(
             )
         }
 
+        composable(route = Page.List.name) {
+            ListScreen(
+                onBerandaClicked = {
+                    kembaliKeHome(navController)
+                },
+                onFormulirClicked = {
+                    navController.navigate(Page.Formulir.name)
+                }
+            )
+        }
+
+
