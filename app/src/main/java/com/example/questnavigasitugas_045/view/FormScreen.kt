@@ -146,5 +146,46 @@ fun FormScreen(onBackToListClicked: () -> Unit = {}) {
                         )
                     }
 
+                    Column {
+                        Text(text = "ROLE", color = Color.White.copy(0.8f), fontSize = 12.sp)
+                        ExposedDropdownMenuBox(
+                            expanded = expanded,
+                            onExpandedChange = { expanded = !expanded }
+                        ) {
+                            OutlinedTextField(
+                                value = role,
+                                onValueChange = {},
+                                readOnly = true,
+                                trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded) },
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .menuAnchor(),
+                                shape = RoundedCornerShape(8.dp),
+                                colors = OutlinedTextFieldDefaults.colors(
+                                    unfocusedBorderColor = Color.White.copy(0.5f),
+                                    focusedBorderColor = Color.White,
+                                    unfocusedTextColor = Color.White,
+                                    focusedTextColor = Color.White
+                                )
+                            )
+                            ExposedDropdownMenu(
+                                expanded = expanded,
+                                onDismissRequest = { expanded = false }
+                            ) {
+                                roleOptions.forEach { option ->
+                                    DropdownMenuItem(
+                                        text = { Text(option) },
+                                        onClick = {
+                                            role = option
+                                            expanded = false
+                                        }
+                                    )
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
 
 }
