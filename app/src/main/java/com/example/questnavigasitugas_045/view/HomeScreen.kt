@@ -62,6 +62,22 @@ fun HomeScreen(onLoginClicked: () -> Unit = {}) {
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.SpaceBetween
         ) {
+            Spacer(modifier = Modifier.height(32.dp))
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .glassmorphism(shape = RoundedCornerShape(32.dp)),
+                contentAlignment = Alignment.Center
+            ) {
+
+                Text(
+                    text = stringResource(R.string.welkam),
+                    fontSize = 24.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = Color.Black,
+                    textAlign = TextAlign.Center
+                )
+            }
 
         }
     }
