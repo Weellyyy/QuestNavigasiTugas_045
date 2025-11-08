@@ -78,6 +78,27 @@ fun HomeScreen(onLoginClicked: () -> Unit = {}) {
                     textAlign = TextAlign.Center
                 )
             }
+            Spacer(modifier = Modifier.height(64.dp))
+
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .glassmorphism(shape = RoundedCornerShape(32.dp)),
+                contentAlignment = Alignment.Center
+            ) {
+                Column(
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    modifier = Modifier.padding(vertical = 48.dp, horizontal = 24.dp)
+                ) {
+                    Image(
+                        painter = painterResource(id = R.drawable.onik),
+                        contentDescription = null,
+                        modifier = Modifier
+                            .size(180.dp)
+                            .clip(CircleShape),
+                        contentScale = ContentScale.Crop
+                    )
+
 
         }
     }
