@@ -12,33 +12,39 @@ object DataProvider {
     val listPeserta = listOf(
         Peserta(
             nama = "Wildan Pratama",
-            tanggalLahir = "23-12-2004",
+            tanggalLahir = "23-07-2004",
             asal = "Bantul",
             role = "Gold Laner"
         ),
         Peserta(
             nama = "Wildan Indi",
-            tanggalLahir = "1995-04-20",
+            tanggalLahir = "11-05-2004",
             asal = "Bengkulu",
             role = "EXP Laner"
         ),
         Peserta(
             nama = "Harlan Fadhilah",
-            tanggalLahir = "1988-11-02",
+            tanggalLahir = "12-12-2004",
             asal = "Ngapak",
             role = "Jungler"
         ),
         Peserta(
             nama = "Dean Dwi Bekti",
-            tanggalLahir = "1991-01-10",
+            tanggalLahir = "31-12-2002",
             asal = "Ciamis",
             role = "Midlaner"
         ),
         Peserta(
             nama = "Rizky PP",
-            tanggalLahir = "1996-07-22",
+            tanggalLahir = "12-01-2003",
             asal = "Bantul",
             role = "Roamer"
-        )
+        ) ,
+        Peserta(
+            nama = "Skylar",
+            tanggalLahir = "22-12-2001",
+            asal = "Bantul",
+            role = "Gold Laner"
+    )
     )
 }
